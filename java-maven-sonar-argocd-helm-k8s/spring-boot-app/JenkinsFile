@@ -6,13 +6,9 @@ pipeline {
     }
   }
   stages {
-    stage('Fix Permissions') {
-      steps {
-        sh 'chown -R jenkins:jenkins /var/lib/jenkins/workspace/ultimate-cicd || true'
-      }
-    }
     stage('Checkout') {
       steps {
+        sh 'echo passed'
         //git branch: 'main', url: 'https://github.com/paeanblotch17/Jenkins-Zero-To-Hero.git'
       }
     }
